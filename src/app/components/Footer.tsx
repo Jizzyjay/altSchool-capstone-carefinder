@@ -3,7 +3,6 @@ import { AiOutlineGithub, AiOutlineTwitter, AiOutlineLinkedin } from "react-icon
 
 function Footer() {
 
-
   const date = new Date();
   const year = date.getFullYear();
   

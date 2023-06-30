@@ -27,35 +27,26 @@ const Page = () => {
       description:
         "Quickly and easily schedule appointments with healthcare centers directly through the app.",
       icon: AiOutlineSchedule,
-    },
-    {
-      name: "Insurance Compatibility",
-      description:
-        "Filter your search results to only show healthcare centers that accept your insurance plan.",
-      icon: MdLocalHospital,
-    },
+    }
   ];
   return (
     <div className="">
-   <div className="bg-[#E0E4EC] ">
+              <div className="bg-[#E0E4EC] ">
       <div className=" px-6 pb-4 lg:flex  mx-auto w-5/6 items-center justify-center md:h-5/6">
         <div className="z-10 mt-32 md:basis-3/5" >
-
-
           <h1 className="text-4xl font-bold tracking-tight text-[#08299B]  sm:text-6xl">
             Find the nearest hospital to you and make an appointment
-
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
           Discover Your Perfect Care: Find Your Hospital, Anytime, Anywhere!
           </p>
-
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="/hospitals"
               className="rounded-md bg-[#08299B] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm border hover:bg-transparent hover:text-[#08299B] hover:border-[#08299B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-Get Started            </Link>
+            Get Started            
+            </Link>
             <Link
               href="https://medium.com/@philipnwabuwa/carefinder-app-documentation-f93f5ba76eb6"
               className="text-sm font-semibold leading-6"
@@ -70,10 +61,7 @@ Get Started            </Link>
     />
 </div>
     </div> 
-
-        
       </div>
-      {/* </div> */}
       <div
         className="absolute inset-x-0 top-[calc(100%-8rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true"
@@ -89,7 +77,7 @@ Get Started            </Link>
       <div className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-indigo-600">
+            <h2 className="text-base text-md font-semibold leading-7 text-indigo-600">
               CareFinder Features
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">

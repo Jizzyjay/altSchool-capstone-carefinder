@@ -6,6 +6,8 @@ import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { useSelector } from "react-redux";
 import { RootState } from "../GlobalRedux/store";
+import logo from '../../../public/logo.png'
+import Image from "next/image";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,19 +18,15 @@ function Navbar() {
   return (
     <>
       <nav
-        className="bg-white text-[#08299B] flex w-full items-center justify-between p-5 lg:px-8 fixed top-0 left-0 right-0 z-50 shadow-md"
+        className="bg-white text-[#08299B] flex w-full items-center justify-between p-4 lg:px-8 fixed top-0 left-0 right-0 z-50 shadow-md"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            {/* <span className="sr-only">Your Company</span> */}
+        <div className="flex lg:flex-1" bg-blu>
             <Link href="/" className="flex justify-center items-center">
-              <h2 className="font-signature pl-2 text-xl text-bold font-extrabold	">
-                Care Finder
-              </h2>
-              <p className=" text-[#08299B] text-xs pl-1">{country}</p>
+       
+              <Image src={logo} alt="logo" width={50} height={50} />
+              {/* <p className=" text-[#08299B] text-xs pl-1">{country}</p> */}
             </Link>
-          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -41,11 +39,10 @@ function Navbar() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 items-center">
-          <Link href="/hospitals" className="text-sm font-semibold leading-6 ">
-            Hospitals
+          <Link href="/hospitals" className="text-md font-semibold leading-6 ">
+            List of Hospitals
           </Link>
-
-          <Link href="/add" className="text-sm font-semibold leading-6 ">
+          <Link href="/add" className="text-md font-semibold leading-6 ">
             Add Hospital
           </Link>
         </Popover.Group>
@@ -56,13 +53,13 @@ function Navbar() {
           <SignedOut>
             <Link
               href="/sign-in"
-              className="text-sm font-semibold leading-6 mr-2 p-2 bg-[#08299B] text-white rounded-md hover:first-letter:uppercase hover:bg-[#08299B] hover:text-[#08299B] hover:bg-transparent border hover:border-[#08299B]  transition duration-300 ease-in-out first-letter:upper  "
+              className="text-sm font-semibold leading-2 mr-2 p-2 bg-[#08299B] text-white rounded-md hover:first-letter:uppercase hover:bg-[#08299B] hover:text-[#08299B] hover:bg-transparent border hover:border-[#08299B] transition duration-300 ease-in-out first-letter:upper"
             >
               <button className="">Sign Up</button>
             </Link>
             <Link
               href="/sign-up"
-              className="text-sm font-semibold leading-6 mr-2 p-2 bg-[#08299B] text-white rounded-md hover:first-letter:uppercase hover:bg-[#08299B] hover:text-[#08299B] hover:bg-transparent border hover:border-[#08299B]  transition duration-300 ease-in-out first-letter:upper  "
+              className="text-sm font-semibold leading-2 mr-2 p-2 bg-[#08299B] text-white rounded-md hover:first-letter:uppercase hover:bg-[#08299B] hover:text-[#08299B] hover:bg-transparent border hover:border-[#08299B]  transition duration-300 ease-in-out first-letter:upper"
             >
               <button>Log In</button>
             </Link>
@@ -103,7 +100,6 @@ function Navbar() {
                 >
                   Find Hospitals
                 </Link>
-
                 <Link
                   onClick={() => setMobileMenuOpen(false)}
                   href="/add"
@@ -112,13 +108,12 @@ function Navbar() {
                   Add Hospital
                 </Link>
               </div>
-
-              <div className="py-6">
+              <div className="py-6 flex justify-between " >
                 <SignedOut>
                   <button>
                     <Link
                       href="/sign-in"
-                      className="text-sm font-semibold leading-6"
+                      className="text-md font-semibold leading-6"
                     >
                       Log in
                     </Link>
@@ -126,7 +121,7 @@ function Navbar() {
                   <button>
                     <Link
                       href="/sign-ip"
-                      className="text-sm font-semibold leading-6"
+                      className="text-md font-semibold leading-6"
                     >
                       Sign Up
                     </Link>

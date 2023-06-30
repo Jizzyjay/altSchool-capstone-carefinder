@@ -25,7 +25,7 @@ const Hospitals = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
-  // Add state for search term
+
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -56,7 +56,6 @@ const Hospitals = () => {
       console.error("Geolocation is not supported by this browser.");
     }
   };
-
   if (status === "failed") {
     return (
       <div className="h-screen flex justify-center items-center">
@@ -65,11 +64,8 @@ const Hospitals = () => {
     );
   }
 
-  // Calculate the index of the first and last item on the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-
-  // Filter the hospitals array to only include items that match the search term
   const filteredHospitals = hospitals.filter(
     (hospital) =>
       hospital.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -162,7 +158,6 @@ const Hospitals = () => {
                   >
                     <div className="flex items-center justify-between">
                       <h2 className="font-bold">{hospital.name}</h2>
-
                       <Link className="ml-1" href={`/hospitals/${hospital.id}`}>
                         <button className="btn">Details</button>
                       </Link>
@@ -175,7 +170,6 @@ const Hospitals = () => {
               </>
             )}
           </ul>
-
           <div className="flex md:flex-row flex-col justify-between items-center my-4">
             <ExportCSV />
             <div className="flex items-center md:mt-0 mt-3">
@@ -186,7 +180,6 @@ const Hospitals = () => {
               >
                 Previous
               </button>
-
               <p className="mx-2">
                 Current Page: {currentPage} /{" "}
                 {Math.ceil(hospitals.length / itemsPerPage)}
@@ -198,11 +191,9 @@ const Hospitals = () => {
               >
                 Next
               </button>
-
               <p className="mx-2 hidden md:flex ">
                 Total Hospitals: {hospitals.length}
               </p>
-
               <p className="mx-2 hidden md:flex">
                 Total Pages: {Math.ceil(hospitals.length / itemsPerPage)}
               </p>
