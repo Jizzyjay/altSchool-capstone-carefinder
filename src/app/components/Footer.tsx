@@ -4,6 +4,7 @@ import {
   AiOutlineTwitter,
   AiOutlineLinkedin,
 } from "react-icons/ai";
+import { BsGlobeAsiaAustralia } from "react-icons/bs"
 import Image from "next/image";
 import logo from "../../../public/logo.png";
 
@@ -21,14 +22,18 @@ function Footer() {
       <p>Copyright © {year} - All right reserved</p>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <Link target="_blank" href="https://www.linkedin.com/in/ekunolajohn/">
-          <AiOutlineLinkedin className="w-7 h-7 hover:text-slate-400" />
+          <AiOutlineLinkedin className="w-6 h-6 hover:text-slate-400" />
         </Link>
         <Link target="_blank" href="https://github.com/Jizzyjay">
-          <AiOutlineGithub className="w-7 h-7 hover:text-slate-400" />
+          <AiOutlineGithub className="w-6 h-6 hover:text-slate-400" />
         </Link>
         <Link target="_blank" href="https://twitter.com/Oluwatosin_EJ">
-          <AiOutlineTwitter className="w-7 h-7 hover:text-blue-400" />
+          <AiOutlineTwitter className="w-6 h-6 hover:text-blue-400" />
         </Link>
+        <Link target="_blank" href="https://johnekunola.com/">
+          <BsGlobeAsiaAustralia  className="w-5 h-5 hover:text-blue-400" />
+        </Link>
+        
       </div>
     </footer>
   );

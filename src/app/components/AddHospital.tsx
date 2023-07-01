@@ -11,8 +11,7 @@ const AddHospitalForm = () => {
     website: "",
     state: "",
     city: "",
-    description: "",
-    nickname: "",
+    description: ""
   });
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -48,8 +47,7 @@ const AddHospitalForm = () => {
         website: "",
         state: "",
         city: "",
-        description: "",
-        nickname: "",
+        description: ""
       });
       setErrorMessage("");
       setSuccessMessage("Hospital added successfully!");
@@ -85,21 +83,6 @@ const AddHospitalForm = () => {
             placeholder="Name"
             className="input input-bordered w-full"
             value={hospitalData.name}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div className="form-control mx-3 my-4 w-full max-w-3xl">
-          <label className="label" htmlFor="Nickname">
-            <span className="label-text">Nickname</span>
-          </label>{" "}
-          <input
-            type="text"
-            id="nickname"
-            name="nickname"
-            placeholder="Nickname"
-            className="input input-bordered w-full"
-            value={hospitalData.nickname}
             onChange={handleInputChange}
           />
         </div>

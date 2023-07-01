@@ -35,7 +35,6 @@ interface HospitalData extends DocumentData {
   state: string;
   website: string;
   description: string;
-  nickname: string;
 }
 
 // Fetch hospitals from Firestore
@@ -85,7 +84,6 @@ export const addHospitalToFirestore = async (
       state: hospitalData.state,
       website: hospitalData.website,
       description: hospitalData.description,
-      nickname: hospitalData.nickname,
     });
   } catch (error) {
     throw new Error("Failed to add hospital to Firestore.");

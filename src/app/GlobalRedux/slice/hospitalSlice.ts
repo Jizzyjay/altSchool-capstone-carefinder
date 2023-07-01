@@ -49,8 +49,7 @@ export const fetchHospitals = createAsyncThunk<Hospital[]>(
       city: hospital.city,
       state: hospital.state,
       website: hospital.website,
-      description: hospital.description,
-      nickname: hospital.nickname,
+      description: hospital.description
     }));
   }
 );

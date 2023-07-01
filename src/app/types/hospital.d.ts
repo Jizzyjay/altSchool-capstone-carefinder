@@ -7,7 +7,6 @@ type Hospital = {
   state: string;
   website: string;
   description: string;
-  nickname: string;
 };
 
 type HospitalData = {
@@ -18,5 +17,4 @@ type HospitalData = {
   state: string;
   city: string;
   description: string;
-  nickname: string;
 };

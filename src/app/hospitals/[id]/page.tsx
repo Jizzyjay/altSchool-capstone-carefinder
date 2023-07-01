@@ -92,7 +92,7 @@ const Page = ({
       <div className="col-span-5">
         <div>
           <h1 className="uppercase font-bold text-3xl text-center">
-            {hospital.name} ({hospital.nickname})
+            {hospital.name}
           </h1>
           <h3 className="my-5 font-semibold text-lg md:text-xl">
             Address: {hospital.address}, {hospital.city}, {hospital.state}

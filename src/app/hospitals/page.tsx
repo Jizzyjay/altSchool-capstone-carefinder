@@ -70,17 +70,13 @@ const Hospitals = () => {
     (hospital) =>
       hospital.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       hospital.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      hospital.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (hospital.nickname &&
-        hospital.nickname.toLowerCase().includes(searchTerm.toLowerCase()))
+      hospital.state.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Slice the hospitals array to only include items for the current page
   const currentItems = filteredHospitals.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
-  // Add a function to handle changing pages
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
   };
@@ -101,8 +97,8 @@ const Hospitals = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-center">
             <input
               type="text"
-              className="input input-bordered w-full"
-              placeholder="Search by city, state, nickname or name"
+              className="input input-bordered w-md md:w-[30rem]"
+              placeholder="Search by city, state or name"
               onChange={(e) => {
                 setSearchTerm(e.target.value);
               }}
@@ -144,7 +140,7 @@ const Hospitals = () => {
                       No Hospitals Found in {city}
                     </h2>
                     <p>
-                      Please try searching for another city or add a hospital{" "}
+                      Please try searching for another city or add hospital{" "}
                       <Link href="/add">
                         <button className="text-blue-500">here</button>
                       </Link>
