@@ -7,7 +7,7 @@ import ExportCSV from "../components/ExportData/ExportCSV";
 import Link from "next/link";
 import axios from "axios";
 import LoadingAnimation from "../components/loadingAnimation";
-import { BiLocationPlus } from "react-icons/bi";
+import { BsSearch } from "react-icons/bs";
 import { setCity, setCountry } from "../GlobalRedux/slice/locationSlice";
 import { Puff } from "react-loader-spinner";
 
@@ -111,7 +111,7 @@ const Hospitals = () => {
               className="btn md:mt-0 md:ml-2 mt-2"
               onClick={handleFindHospitalsNearMe}
             >
-              Nearby Hospitals&nbsp;
+              Search Hospitals&nbsp;
               {loading ? (
                 <div className="flex items-center ml-2 w-6 h-6">
                   <Puff
@@ -125,7 +125,7 @@ const Hospitals = () => {
                 </div>
               ) : (
                 <div>
-                  <BiLocationPlus className="ml-2 w-6 h-6" />
+                  <BsSearch className="ml-2 w-4 h-4" />
                 </div>
               )}
             </button>

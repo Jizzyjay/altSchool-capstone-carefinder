@@ -1,4 +1,4 @@
-import { BiLocationPlus } from "react-icons/bi";
+import { BsSearch } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { setCity } from "../GlobalRedux/slice/locationSlice";
 
@@ -31,7 +31,7 @@ const FindHospitalsNearMe = () => {
       className="btn md:mt-0 md:ml-2 mt-2"
       onClick={handleFindHospitalsNearMe}
     >
-      Nearby Hospitals <BiLocationPlus className="ml-2 w-6 h-6" />
+      Search Hospital <BsSearch className="ml-2 w-6 h-6" />
     </button>
   );
 };
