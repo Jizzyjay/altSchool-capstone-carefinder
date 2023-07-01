@@ -38,7 +38,7 @@ const Page = () => {
             Find the nearest hospital to you and make an appointment
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-          Discover Your Perfect Care: Find Your Hospital, Anytime, Anywhere!
+            When it comes to finding the perfect hospital for your needs, look no further. Our comprehensive search tool allows you to discover the ideal hospital for you, anytime and anywhere. With detailed information on specialties, facilities, and patient reviews, you can make an informed decision with ease.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
@@ -46,12 +46,6 @@ const Page = () => {
               className="rounded-md bg-[#08299B] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm border hover:bg-transparent hover:text-[#08299B] hover:border-[#08299B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
             Get Started            
-            </Link>
-            <Link
-              href="https://medium.com/@philipnwabuwa/carefinder-app-documentation-f93f5ba76eb6"
-              className="text-sm font-semibold leading-6"
-            >
-              Learn more <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -77,15 +71,14 @@ const Page = () => {
       <div className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base text-md font-semibold leading-7 text-indigo-600">
-              CareFinder Features
+            <h2 className="text-base font-semibold leading-7 text-indigo-600">
+              Our Features
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">
-              Start your search today and take control of your health.
+              Begin your search now and empower yourself with the ability to manage your well-being.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              CareFinder is a free, easy-to-use tool that allows you to search
-              for and connect with top-rated healthcare providers in your area.
+             CareFinder is a user-friendly platform that offers a comprehensive database of highly-rated healthcare providers in your local vicinity. With this free tool, you can effortlessly search for and connect with the best healthcare professionals to meet your specific needs.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

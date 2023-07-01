@@ -24,7 +24,7 @@ function Navbar() {
         <div className="flex lg:flex-1" bg-blu>
             <Link href="/" className="flex justify-center items-center">
        
-              <Image src={logo} alt="logo" width={50} height={50} />
+              <Image src={logo} alt="logo" width={35} height={35} />
               {/* <p className=" text-[#08299B] text-xs pl-1">{country}</p> */}
             </Link>
         </div>

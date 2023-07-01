@@ -1,17 +1,22 @@
 import Link from "next/link";
-import { AiOutlineGithub, AiOutlineTwitter, AiOutlineLinkedin } from "react-icons/ai";
+import {
+  AiOutlineGithub,
+  AiOutlineTwitter,
+  AiOutlineLinkedin,
+} from "react-icons/ai";
+import Image from "next/image";
+import logo from "../../../public/logo.png";
 
 function Footer() {
-
   const date = new Date();
   const year = date.getFullYear();
-  
+
   return (
     <footer className="footer  items-center p-10 mt-10 bg-[#08299B] text-neutral-content">
       <div className="items-center grid-flow-col gap-3">
-      <Link href="/" className="flex justify-center items-center">
-              <h2 className="font-signature pl-2 text-xl text-bold font-extrabold	">Care Finder</h2>
-            </Link>
+        <Link href="/" className="flex justify-center items-center">
+          <Image src={logo} alt="logo" width={35} height={35} />
+        </Link>
       </div>
       <p>Copyright © {year} - All right reserved</p>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
