@@ -33,7 +33,6 @@ interface HospitalData extends DocumentData {
   createdAt: Date;
   city: string;
   state: string;
-  website: string;
   description: string;
 }
 
@@ -82,7 +81,6 @@ export const addHospitalToFirestore = async (
       createdAt: new Date(),
       city: hospitalData.city,
       state: hospitalData.state,
-      website: hospitalData.website,
       description: hospitalData.description,
     });
   } catch (error) {

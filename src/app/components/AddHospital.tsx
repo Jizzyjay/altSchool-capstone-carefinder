@@ -8,7 +8,6 @@ const AddHospitalForm = () => {
     name: "",
     address: "",
     phoneNumber: "",
-    website: "",
     state: "",
     city: "",
     description: ""
@@ -30,7 +29,6 @@ const AddHospitalForm = () => {
       !hospitalData.name ||
       !hospitalData.address ||
       !hospitalData.phoneNumber ||
-      !hospitalData.website ||
       !hospitalData.state ||
       !hospitalData.city ||
       !hospitalData.description
@@ -44,7 +42,6 @@ const AddHospitalForm = () => {
         name: "",
         address: "",
         phoneNumber: "",
-        website: "",
         state: "",
         city: "",
         description: ""
@@ -156,24 +153,6 @@ const AddHospitalForm = () => {
               className="input input-bordered w-full placeholder-opacity-70"
             />
           </div>
-          <div className="form-control w-full">
-            <label className="label" htmlFor="website">
-              <span className="label-text">
-                website<span className="text-red-500">*</span>
-              </span>
-            </label>{" "}
-            <div className="flex items-center input input-bordered w-full">
-              <span className="text-gray-500 text-sm">https://</span>
-              <input
-                type="text"
-                id="website"
-                name="website"
-                value={hospitalData.website}
-                onChange={handleInputChange}
-                className="w-full ml-2 placeholder-opacity-70"
-              />
-            </div>
-          </div>
         </div>
         <div className="form-control my-4 w-full max-w-3xl">
           <label className="label" htmlFor="description">
@@ -190,9 +169,7 @@ const AddHospitalForm = () => {
             placeholder="Details about the hospital"
           ></textarea>
         </div>
-
         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-
         {successMessage && <p className="text-green-500">{successMessage}</p>}
         <button className="btn w-full max-w-3xl mt-4 md:mb-4" type="submit">
           Submit

@@ -106,12 +106,7 @@ const Page = ({
             </span>
           </p>
 
-          <div className="lg:grid lg:grid-cols-3 flex flex-col gap-4 lg:mr-5">
-            <Link href={hospital.website} target="_blank" className="btn my-3">
-              Visit Website
-              <AiOutlineSwapRight className="ml-2 w-7 h-7" />
-            </Link>
-
+          <div className="lg:grid lg:grid-cols-3 flex flex-col gap-4 lg:mr-5"> 
             <Link
               className="btn my-3"
               target="_blank"

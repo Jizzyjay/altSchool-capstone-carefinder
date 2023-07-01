@@ -14,7 +14,6 @@ const ExportCSV = () => {
     { label: "Address", key: "address" },
     { label: "Phone Number", key: "phone" },
     { label: "Email", key: "email" },
-    { label: "Website", key: "website" },
     { label: "State", key: "state" },
     { label: "City", key: "city" },
   ];
